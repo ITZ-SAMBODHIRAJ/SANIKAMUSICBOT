@@ -1,8 +1,8 @@
 {
-    "name": "ᴢᴀɪᴅ ᴠᴄ ᴘʟᴀʏᴇʀ",
-    "logo": "https://telegra.ph/file/a5efad6976ca08e71ef69.jpg",
-    "description": "ᴢᴀɪᴅ ᴠᴄ ᴘʟᴀʏᴇʀ ɪꜱ ᴀᴡᴇꜱᴏᴍᴇ ᴠᴄ ᴄʜᴀᴛ ᴘʟᴀʏᴇʀ ᴏꜰ ᴛᴇʟᴇɢʀᴀᴍ.",
-    "keywords": ["ᴢᴀɪᴅ", "ᴠᴏɪᴄᴇ ᴄʜᴀᴛ", "ᴛᴇʟᴇɢʀᴀᴍ"],
+    "name": "ʙᴀᴅɴᴀᴍ ᴠᴄ ᴘʟᴀʏᴇʀ",
+    "logo": "https://telegra.ph/file/2a0c5c08a90b73ba03509.jpg",
+    "description": "ʙᴀᴅɴᴀᴍ ᴠᴄ ᴘʟᴀʏᴇʀ ɪꜱ ᴀᴡᴇꜱᴏᴍᴇ ᴠᴄ ᴄʜᴀᴛ ᴘʟᴀʏᴇʀ ᴏꜰ ᴛᴇʟᴇɢʀᴀᴍ.",
+    "keywords": ["ʙᴀᴅɴᴀᴍ", "ᴠᴏɪᴄᴇ ᴄʜᴀᴛ", "ᴛᴇʟᴇɢʀᴀᴍ"],
     "repository": "https://github.com/Itsunknown-12/Zaid-Vc-Player",
     "stack": "container",
     "env": {

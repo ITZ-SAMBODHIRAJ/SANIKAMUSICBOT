@@ -3,7 +3,7 @@
     "logo": "https://telegra.ph/file/2a0c5c08a90b73ba03509.jpg",
     "description": "ʙᴀᴅɴᴀᴍ ᴠᴄ ᴘʟᴀʏᴇʀ ɪꜱ ᴀᴡᴇꜱᴏᴍᴇ ᴠᴄ ᴄʜᴀᴛ ᴘʟᴀʏᴇʀ ᴏꜰ ᴛᴇʟᴇɢʀᴀᴍ.",
     "keywords": ["ʙᴀᴅɴᴀᴍ", "ᴠᴏɪᴄᴇ ᴄʜᴀᴛ", "ᴛᴇʟᴇɢʀᴀᴍ"],
-    "repository": "https://github.com/Itsunknown-12/Zaid-Vc-Player",
+    "repository": "https://github.com/BadnamOp/Badnam_Vc_Player",
     "stack": "container",
     "env": {
         "SESSION_NAME": {
@@ -35,24 +35,24 @@
             "value": ""
         },
         "BROADCAST_AS_COPY": {
-            "description": "choose one between False and True, if you don't know what this is, ask to @VeezSupportGroup on telegram",
+            "description": "choose one between False and True, if you don't know what this is, ask to @naughty_stud_ents on telegram",
             "required": false,
             "value": "False"
         },
         "BOT_USERNAME": {
             "description": "fill with your bot username without @",
             "required": true,
-            "value": "zaid2_robot"
+            "value": "Noughty_Student_Bot"
         },
         "ASSISTANT_NAME": {
             "description": "fill with the assistant username without @",
             "required": true,
-            "value": "zaid assistant"
+            "value": "𝙉𝙖𝙪𝙜𝙝𝙩𝙮 ✘ 𝙎𝙩𝙪𝙙𝙚𝙣𝙩"
         },
         "OWNER_NAME": {
             "description": "fill with your username without @",
             "required": false,
-            "value": "Timesisnotwaiting"
+            "value": "Badnam_xD"
         },
         "API_ID": {
             "description": "your App ID from my.telegram.org/apps",
@@ -79,12 +79,12 @@
         "UPDATES_CHANNEL": {
             "description": "if you have channel fill the channel username here without @",
             "required": false,
-            "value": "Zaid_Updates"
+            "value": "naughty_stud_ents"
         },
         "GROUP_SUPPORT": {
             "description": "if you have group fill the group username here without @",
             "required": false,
-            "value": "Zaid_Support"
+            "value": "naughty_stud_ents"
         }
     },
     "buildpacks": [

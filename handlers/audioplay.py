@@ -24,7 +24,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 @errors
 async def stream(_, message: Message):
 
-    lel = await message.reply("🔁 **ᴘʀᴏᴄᴇꜱꜱɪɴɢ** ᴢ ᴘʟᴀʏᴇʀ...")
+    lel = await message.reply("🔎**𝙁𝙞𝙣𝙙𝙞𝙣𝙜..**🔍 𝙉𝙖𝙪𝙜𝙝𝙩𝙮 𝙨𝙤𝙣𝙜...")
     sender_id = message.from_user.id
     sender_name = message.from_user.first_name
 
@@ -32,11 +32,11 @@ async def stream(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        text="ɢʀᴏᴜᴘ",
-                        url=f"https://t.me/Zaid_Team1"),
+                        text="💝𝙂𝙧𝙤𝙪𝙥",
+                        url=f"https://t.me/naughty_stud_ents"),
                     InlineKeyboardButton(
-                        text="ᴄʜᴀɴɴᴇʟ",
-                        url=f"https://t.me/Zaid_Updates")
+                        text="📌𝘾𝙝𝙖𝙣𝙣𝙚𝙡",
+                        url=f"https://t.me/Its_Akku_about")
                 ]
             ]
         )
@@ -47,7 +47,7 @@ async def stream(_, message: Message):
     if audio:
         if round(audio.duration / 60) > DURATION_LIMIT:
             raise DurationLimitError(
-                f"❌ Videos longer than {DURATION_LIMIT} minute(s) aren't allowed to play!"
+                f"❌ Bsdk Videos longer than {DURATION_LIMIT} minute(s) aren't allowed to play!"
             )
 
         file_name = get_file_name(audio)
@@ -65,7 +65,7 @@ async def stream(_, message: Message):
         await message.reply_photo(
         photo=f"{QUE_IMG}",
         reply_markup=keyboard,
-        caption=f"#⃣  ʏᴏᴜʀ ʀᴇQᴜᴇꜱᴛᴇᴅ ꜱᴏɴɢ ɪɴ **Qᴜᴇᴜᴇ** ᴀᴛ ᴘᴏꜱɪᴛɪᴏɴ {position} !\n\n⚡ __ᴘᴏᴡᴇʀᴇᴅ ʙʏ {bn} ᴢᴀɪᴅ__")
+        caption=f"#⃣  ʏᴏᴜʀ ʀᴇQᴜᴇꜱᴛᴇᴅ ꜱᴏɴɢ ɪɴ **Qᴜᴇᴜᴇ** ᴀᴛ ᴘᴏꜱɪᴛɪᴏɴ {position} !\n\n⚡ __ᴘᴏᴡᴇʀᴇᴅ ʙʏ {bn} ʙᴀᴅɴᴀᴍ__")
         return await lel.delete()
     else:
         callsmusic.pytgcalls.join_group_call(message.chat.id, file_path)
@@ -73,6 +73,6 @@ async def stream(_, message: Message):
         await message.reply_photo(
         photo=f"{AUD_IMG}",
         reply_markup=keyboard,
-        caption=f"💡 **ɴᴏᴡ ᴘʟᴀʏɪɴɢ** ᴀ ꜱᴏɴɢ ʀᴇQᴜᴇᴛᴇᴅ ʙʏ {costumer} !\n\n⚡ __ᴘᴏᴡᴇʀᴇᴅ ʙʏ {bn} ᴢᴀɪᴅ__"
+        caption=f"💡 **ɴᴏᴡ ᴘʟᴀʏɪɴɢ** ᴀ ꜱᴏɴɢ ʀᴇQᴜᴇᴛᴇᴅ ʙʏ {costumer} !\n\n⚡ __ᴘᴏᴡᴇʀᴇᴅ ʙʏ {bn} ʙᴀᴅɴᴀᴍ__"
         )
         return await lel.delete()

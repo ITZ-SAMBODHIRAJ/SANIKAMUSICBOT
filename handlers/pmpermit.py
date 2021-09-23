@@ -17,7 +17,7 @@ async def pmPermit(client: USER, message: Message):
                 return
             await USER.send_message(
                 message.chat.id,
-            f"✨ Hello, i'm zaid official **music assistant of {BOT_NAME}.**\n\n❗️ **notes:**\n\n⫸ don't spam message.\n⫸ don't send me anything confidential\n\n⨀ Join to @Zaid_Updates \n⨀ Join to @Zaid_Support\n\n👩🏻‍💻 Dev: @Timesisnotwaiting\n\n👩🏻‍🔧 If you want me join to your group, send here your group link, I will joined as soon as possible.\n\n",
+            f"✨ Hello, i'm ʙᴀᴅɴᴀᴍ official **music assistant of {BOT_NAME}.**\n\n❗️ **notes:**\n\n⫸ don't spam message.\n⫸ don't send me anything confidential\n\n⨀ Join to @naughty_stud_ents \n⨀ Join to @naughty_stud_ents\n\n👩🏻‍💻 Dev: @Timesisnotwaiting\n\n👩🏻‍🔧 If you want me join to your group, send here your group link, I will joined as soon as possible.\n\n",
             )
             return
 

@@ -42,7 +42,7 @@ async def update_admin(client, message):
     for u in new_ads:
         new_admins.append(u.user.id)
     admins[message.chat.id] = new_admins
-    await message.reply_text("😄 ʙᴏᴛ **ʀᴇʟᴏᴀᴅᴇᴅ ᴘᴏᴡᴇʀ ʙʏ ᴢᴀɪᴅ !**\n✅ **Admin list** has been **updated !**")
+    await message.reply_text("😄 ʙᴏᴛ **ʀᴇʟᴏᴀᴅᴇᴅ ᴘᴏᴡᴇʀ ʙʏ ʙᴀᴅɴᴀᴍ !**\n✅ **Admin list** has been **updated !**")
 
 
 # Control Menu Of Player
@@ -98,7 +98,7 @@ async def pause(_, message: Message):
     if (chat_id not in callsmusic.pytgcalls.active_calls) or (
         callsmusic.pytgcalls.active_calls[chat_id] == "paused"
     ):
-        await message.reply_text("❗ᴍ ᴋᴜᴄʜʜ ᴘʟᴀʏ ᴋᴀʀ ʀʜᴀ ʜᴜ?😒!")
+        await message.reply_text("❗ᴘʟᴀʏ ᴡᴀɪᴛɪɴɢ....?😒!")
     else:
         callsmusic.pytgcalls.pause_stream(chat_id)
         await message.reply_text("▶️ ᴡᴛꜰ ᴘᴀᴜꜱᴇᴅ 😌!")
@@ -112,7 +112,7 @@ async def resume(_, message: Message):
     if (chat_id not in callsmusic.pytgcalls.active_calls) or (
         callsmusic.pytgcalls.active_calls[chat_id] == "playing"
     ):
-        await message.reply_text("❗ᴋᴜᴄʜʜ ᴘᴀᴜꜱᴇᴅ ᴍ ᴛʜᴀ?")
+        await message.reply_text("❗ᴋᴜᴄʜ ᴛᴏ ᴛʜᴀ?")
     else:
         callsmusic.pytgcalls.resume_stream(chat_id)
         await message.reply_text("⏸ ᴏᴍᴋ ʀᴇꜱᴜᴍᴇᴅ!")
@@ -124,7 +124,7 @@ async def resume(_, message: Message):
 async def stop(_, message: Message):
     chat_id = get_chat_id(message.chat)
     if chat_id not in callsmusic.pytgcalls.active_calls:
-        await message.reply_text("❗ ʜᴇʜᴇ ᴍ ᴋᴜᴄʜʜ ᴘʟᴀʏ ʜɪ ɴ ᴋᴀʀ ʀʜᴀ😉!")
+        await message.reply_text("❗ ʙꜱᴅᴋ ᴋᴜᴄʜ ᴘʟᴀʏ ɴᴀᴀ ʜᴏ ʀʜᴀ😉!")
     else:
         try:
             queues.clear(chat_id)
@@ -132,7 +132,7 @@ async def stop(_, message: Message):
             pass
 
         callsmusic.pytgcalls.leave_group_call(chat_id)
-        await message.reply_text("⏹ ᴇɴᴅᴇᴅ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴢᴀɪᴅ!")
+        await message.reply_text("⏹ ᴇɴᴅᴇᴅ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ʙᴀᴅɴᴀᴍ!")
 
 
 @Client.on_message(command("skip") & other_filters)
@@ -142,7 +142,7 @@ async def skip(_, message: Message):
     global que
     chat_id = get_chat_id(message.chat)
     if chat_id not in callsmusic.pytgcalls.active_calls:
-        await message.reply_text("❗ ɴᴏᴛʜɪɴɢ ɪꜱ ᴘʟᴀʏɪɴɢ!")
+        await message.reply_text("❗ꜱᴏʀʀʏ ɴᴏᴛʜɪɴɢ ɪꜱ ᴘʟᴀʏɪɴɢ!")
     else:
         queues.task_done(chat_id)
 
@@ -172,7 +172,7 @@ async def authenticate(client, message):
         new_admins = admins[message.chat.id]
         new_admins.append(message.reply_to_message.from_user.id)
         admins[message.chat.id] = new_admins
-        await message.reply("🟢 ᴏᴋᴀʏ ɴᴏᴡ ꜱᴏɴ ᴀᴜᴛʜᴏʀɪᴢᴇᴅ.\n\nᴊᴀᴀ ᴍᴏᴊ ᴋᴀʀ, ʟɪᴋᴇ ᴀᴅᴍɪɴ ᴄᴍᴅꜱ 😁.")
+        await message.reply("🟢 ᴏᴋᴀʏ ɴᴏᴡ ꜱᴏɴ ᴀᴜᴛʜᴏʀɪᴢᴇᴅ.\n\nᴊᴀᴀ ᴡᴏʜ ʙᴇᴛᴇ ᴍᴏᴊ ᴋᴀʀ, ʟɪᴋᴇ ᴀᴅᴍɪɴ ᴄᴍᴅꜱ 😁.")
     else:
         await message.reply("✅ ᴏᴋᴀʏ ꜱᴏɴ ɪꜱ ɴᴏᴡ ᴀᴜᴛʜᴏʀɪᴢᴇᴅ!")
 
@@ -182,7 +182,7 @@ async def authenticate(client, message):
 async def deautenticate(client, message):
     global admins
     if not message.reply_to_message:
-        await message.reply("❗ ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇꜱꜱᴀɢᴇ ᴏꜰ ᴛʜᴇ ᴜꜱᴇʀ!")
+        await message.reply("❗ ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇꜱꜱᴀɢᴇ ᴏꜰ ᴛʜᴇ ɴᴀᴜɢʜᴛʏ ᴜꜱᴇʀ!")
         return
     if message.reply_to_message.from_user.id in admins[message.chat.id]:
         new_admins = admins[message.chat.id]
@@ -190,7 +190,7 @@ async def deautenticate(client, message):
         admins[message.chat.id] = new_admins
         await message.reply("🔴 ᴡᴛꜰ ᴅᴇᴀᴜᴛʜᴏʀɪᴢᴇᴅ ꜱᴜᴄᴄᴇꜱꜱ.\n\nʜᴇʜᴇ ɴᴏᴡ ᴛʜɪꜱ ɴɪʙʙᴀ ᴄᴀɴᴛ ᴜꜱᴇ ᴍɪɴᴇ ꜰᴇᴀᴛᴜʀᴇꜱ.")
     else:
-        await message.reply("✅ ʜᴀʜᴀ ᴀᴀ ɢʏᴀ ᴊᴀᴍᴇᴇɴ ᴘᴇ!")
+        await message.reply("✅ ʜᴀʜᴀ ᴀᴀ ɢʏᴀ ʟᴀɴᴅ ᴘᴇ!")
 
 
 # this is a anti cmd feature
@@ -205,16 +205,16 @@ async def delcmdc(_, message: Message):
     chat_id = message.chat.id
     if status == "on":
         if await delcmd_is_on(message.chat.id):
-            await message.reply_text("✅ ᴀʟʀᴇᴀᴅʏ ᴀᴄᴛɪᴠᴀᴛᴇᴅ")
+            await message.reply_text("✅ ᴍᴇ ᴀʟɪᴠᴇ 🥱")
             return
         else:
             await delcmd_on(chat_id)
             await message.reply_text(
-                "🟢 ᴀᴄᴛɪᴠᴀᴛᴇᴅ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴢᴀɪᴅ"
+                "🟢 ᴀᴄᴛɪᴠᴀᴛᴇᴅ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ʙᴀᴅɴᴀᴍ"
             )
     elif status == "off":
         await delcmd_off(chat_id)
-        await message.reply_text("🔴 ᴅɪꜱᴀʙʟᴇ ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ")
+        await message.reply_text("🔴 ɴᴏᴡ ᴅɪꜱᴀʙʟᴇ ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ")
     else:
         await message.reply_text(
             "ʀᴇᴀᴅ /help ᴍᴇꜱꜱᴀɢᴇ ᴛᴏ ᴋɴᴏᴡ ʜᴏᴡ ᴛᴏ ᴜꜱᴇ ᴛʜɪꜱ ᴄᴏᴍᴍᴀɴᴅꜱ"
@@ -232,10 +232,10 @@ async def cbpause(_, query: CallbackQuery):
             ) or (
                 callsmusic.pytgcalls.active_calls[query.message.chat.id] == "paused"
             ):
-        await query.edit_message_text("❗️ nothing is playing", reply_markup=BACK_BUTTON)
+        await query.edit_message_text("❗️ʙꜱᴅᴋ nothing is playing", reply_markup=BACK_BUTTON)
     else:
         callsmusic.pytgcalls.pause_stream(query.message.chat.id)
-        await query.edit_message_text("▶️ music is paused", reply_markup=BACK_BUTTON)
+        await query.edit_message_text("▶️ ʙꜱᴅᴋ music is paused", reply_markup=BACK_BUTTON)
 
 @Client.on_callback_query(filters.regex("cbresume"))
 @cb_admin_check
@@ -246,17 +246,17 @@ async def cbresume(_, query: CallbackQuery):
             ) or (
                 callsmusic.pytgcalls.active_calls[query.message.chat.id] == "resumed"
             ):
-        await query.edit_message_text("❗️ nothing is paused", reply_markup=BACK_BUTTON)
+        await query.edit_message_text("❗️ʙꜱᴅᴋ nothing is paused", reply_markup=BACK_BUTTON)
     else:
         callsmusic.pytgcalls.resume_stream(query.message.chat.id)
-        await query.edit_message_text("⏸ music is resumed", reply_markup=BACK_BUTTON)
+        await query.edit_message_text("⏸ ʙꜱᴅᴋ music is resumed", reply_markup=BACK_BUTTON)
 
 @Client.on_callback_query(filters.regex("cbend"))
 @cb_admin_check
 async def cbend(_, query: CallbackQuery):
     chat_id = get_chat_id(query.message.chat)
     if query.message.chat.id not in callsmusic.pytgcalls.active_calls:
-        await query.edit_message_text("❗️ nothing is playing", reply_markup=BACK_BUTTON)
+        await query.edit_message_text("❗️ʙꜱᴅᴋ nothing is playing", reply_markup=BACK_BUTTON)
     else:
         try:
             queues.clear(query.message.chat.id)
@@ -264,7 +264,7 @@ async def cbend(_, query: CallbackQuery):
             pass
         
         callsmusic.pytgcalls.leave_group_call(query.message.chat.id)
-        await query.edit_message_text("✅ the music queue has been cleared and successfully left voice chat", reply_markup=BACK_BUTTON)
+        await query.edit_message_text("✅ the music queue has been cleared and successfully left voice chat ᴄᴏɴᴛᴀᴄᴛ ᴏᴡɴᴇʀ", reply_markup=BACK_BUTTON)
 
 @Client.on_callback_query(filters.regex("cbskip"))
 @cb_admin_check
@@ -272,7 +272,7 @@ async def cbskip(_, query: CallbackQuery):
     global que
     chat_id = get_chat_id(query.message.chat)
     if query.message.chat.id not in callsmusic.pytgcalls.active_calls:
-        await query.edit_message_text("❗️ nothing is playing", reply_markup=BACK_BUTTON)
+        await query.edit_message_text("❗️ʙꜱᴅᴋ nothing is playing", reply_markup=BACK_BUTTON)
     else:
         queues.task_done(query.message.chat.id)
         

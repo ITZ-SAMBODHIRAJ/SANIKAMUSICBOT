@@ -26,10 +26,10 @@ async def pause(_, message: Message):
     if (chat_id not in callsmusic.pytgcalls.active_calls) or (
         callsmusic.pytgcalls.active_calls[chat_id] == "paused"
     ):
-        await message.reply_text("❗ nothing is playing !")
+        await message.reply_text("❗Bsdk nothing is playing !")
     else:
         callsmusic.pytgcalls.pause_stream(chat_id)
-        await message.reply_text("▶️ music paused!")
+        await message.reply_text("▶️ 𝙉𝙖𝙪𝙜𝙝𝙩𝙮 𝙋𝙖𝙪𝙨𝙚𝙙..!")
 
 
 @Client.on_message(filters.command(["channelresume","cresume"]) & filters.group & ~filters.edited)
@@ -47,10 +47,10 @@ async def resume(_, message: Message):
     if (chat_id not in callsmusic.pytgcalls.active_calls) or (
         callsmusic.pytgcalls.active_calls[chat_id] == "playing"
     ):
-        await message.reply_text("❗ nothing is paused!")
+        await message.reply_text("❗Bsdk nothing is paused!")
     else:
         callsmusic.pytgcalls.resume_stream(chat_id)
-        await message.reply_text("⏸ music resumed!")
+        await message.reply_text("⏸ 𝙉𝙖𝙪𝙜𝙝𝙩𝙮 𝙍𝙚𝙨𝙪𝙢𝙚!")
 
 
 @Client.on_message(filters.command(["channelend","cend"]) & filters.group & ~filters.edited)
@@ -66,7 +66,7 @@ async def stop(_, message: Message):
       return    
     chat_id = chid
     if chat_id not in callsmusic.pytgcalls.active_calls:
-        await message.reply_text("❗ nothing in streaming!")
+        await message.reply_text("❗Bsdk nothing in streaming!")
     else:
         try:
             callsmusic.queues.clear(chat_id)
@@ -74,7 +74,7 @@ async def stop(_, message: Message):
             pass
 
         callsmusic.pytgcalls.leave_group_call(chat_id)
-        await message.reply_text("⏹ streaming ended!")
+        await message.reply_text("⏹ 𝙉𝙖𝙪𝙜𝙝𝙩𝙮 𝙎𝙩𝙧𝙞𝙢𝙚 𝙀𝙣𝙙!")
 
 
 @Client.on_message(filters.command(["channelskip","cskip"]) & filters.group & ~filters.edited)
@@ -91,7 +91,7 @@ async def skip(_, message: Message):
       return    
     chat_id = chid
     if chat_id not in callsmusic.pytgcalls.active_calls:
-        await message.reply_text("❗ nothing to skip!")
+        await message.reply_text("❗Bsdk nothing to skip!")
     else:
         callsmusic.queues.task_done(chat_id)
 

@@ -43,7 +43,7 @@ async def start_(client: Client, message: Message):
             [ 
                 [
                     InlineKeyboardButton(
-                        "➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ᴜʀ ᴄʜᴀᴛꜱ 😄", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
+                        "😚 🎧 𝙁𝙚𝙚𝙡 𝙎𝙤𝙣𝙜 🎶 ✨", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
                 ],[
                     InlineKeyboardButton(
                         "😢 ʜᴏᴡ ᴛᴏ ᴜꜱᴇ ᴍᴇ", callback_data="cbhowtouse")
@@ -52,19 +52,19 @@ async def start_(client: Client, message: Message):
                          "😄 ᴄᴏᴍᴍᴀɴᴅꜱ", callback_data="cbcmds"
                     ),
                     InlineKeyboardButton(
-                        "💝 ᴅᴇᴠᴇʟᴏᴘᴇʀ", url=f"https://t.me/Timesisnotwaiting")
+                        "🔥 𝘽𝙖𝙙𝙣𝙖𝙢 💝", url=f"https://t.me/Badnam_xD")
                 ],[
                     InlineKeyboardButton(
-                        "👥 ᴏꜰꜰɪᴄɪᴀʟ ꜱᴜᴘᴘᴏʀᴛ", url=f"https://t.me/Zaid_Support"
+                        "🎌 𝙂𝙧𝙤𝙪𝙥 𝙊𝙬𝙣𝙚𝙧 🎌", url=f"https://t.me/Nau_ghty_devil"
                     ),
                     InlineKeyboardButton(
-                        "🔥 ᴏꜰꜰɪᴄɪᴀʟ ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/Zaid_Updates")
+                        "📡𝘾𝙝𝙖𝙩𝙩𝙞𝙣𝙜 𝙎𝙚𝙧𝙫𝙚𝙧📌", url=f"https://t.me/naughty_stud_ents")
                 ],[
                     InlineKeyboardButton(
-                        "😁 ᴏꜰꜰɪᴄɪᴀʟ ᴢᴀɪᴅ ᴄʜᴀᴛ", url="https://t.me/Zaid_Team1")
+                        "💝 𝘽𝙝𝙖𝙞 💝", url="https://t.me/Atit_raj_188")
                 ],[
                     InlineKeyboardButton(
-                        "😉 ꜱᴏᴜʀᴄᴇ ᴄᴏᴅᴇ😍", url="https://github.com/Itsunknown-12/Zaid-Vc-Player"
+                        "💥 𝘾𝙤𝙙𝙚'𝙨 💫", url="https://github.com/BadnamOp/Badnam_Vc_Player"
                     )
                 ]
             ]
@@ -79,15 +79,15 @@ async def start(client: Client, message: Message):
     uptime_sec = (current_time - START_TIME).total_seconds()
     uptime = await _human_time_duration(int(uptime_sec))
     await message.reply_text(
-        f"""✅ **ᴢᴀɪᴅ ɪꜱ ʀᴜɴɴɪɴɢ**\n<b>💠 **ᴜᴘᴛɪᴍᴇ:**</b> `{uptime}`""",
+        f"""✅ **ʙᴀᴅɴᴀᴍ ɪꜱ ʀᴜɴɴɪɴɢ**\n<b>💠 **ᴜᴘᴛɪᴍᴇ:**</b> `{uptime}`""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "✨ ɢʀᴏᴜᴘ", url=f"https://t.me/Zaid_Support"
+                        "✨ 𝘾𝙝𝙖𝙩𝙩𝙞𝙣𝙜 𝙜𝙧𝙤𝙪𝙥", url=f"https://t.me/naughty_stud_ents"
                     ),
                     InlineKeyboardButton(
-                        "📣 ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/Zaid_Updates"
+                        "📣 𝙘𝙝𝙖𝙣𝙣𝙚𝙡", url=f"https://t.me/its_akku_about"
                     )
                 ]
             ]
@@ -99,9 +99,9 @@ async def help(client: Client, message: Message):
     await message.reply_text(
         f"""<b>👋🏻 **Hello** {message.from_user.mention()}</b>
 
-**Please press the button below to read the explanation and see the list of available commands powered By Zaid!**
+**Please press the button below to read the explanation and see the list of available commands powered By Badnam!**
 
-⚡ __Powered by {BOT_NAME} ᴢᴀɪᴅ""",
+⚡ __Powered by {BOT_NAME} ʙᴀᴅɴᴀᴍ""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -120,33 +120,33 @@ async def help_(client: Client, message: Message):
 
 **in this menu you can open several available command menus, in each command menu there is also a brief explanation of each command**
 
-⚡ __Powered by {BOT_NAME} Zaid__""",
+⚡ __Powered by {BOT_NAME} Badnam__""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "⚡ ʙᴀꜱɪᴄ ᴄᴍᴅꜱ", callback_data="cbbasic"
+                        "⚡ 𝘽𝙖𝙨𝙞𝙘 𝙐𝙨𝙚", callback_data="cbbasic"
                     ),
                     InlineKeyboardButton(
-                        "❣️ ᴀᴅᴠᴀɴᴄᴇᴅ ᴄᴍᴅꜱ", callback_data="cbadvanced"
+                        "❣️ 𝘼𝙙𝙫𝙖𝙣𝙘𝙚 𝙐𝙨𝙚", callback_data="cbadvanced"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "😏 ᴀᴅᴍɪɴ ᴄᴍᴅꜱ", callback_data="cbadmin"
+                        "😏 𝘼𝙙𝙢𝙞𝙣 𝙐𝙨𝙚", callback_data="cbadmin"
                     ),
                     InlineKeyboardButton(
-                        "⏲️ ꜱᴜᴅᴏ ᴄᴍᴅꜱ", callback_data="cbsudo"
+                        "⏲️ 𝙎𝙪𝙙𝙤 𝙐𝙨𝙚", callback_data="cbsudo"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "🙂 ᴏᴡɴᴇʀ ᴄᴍᴅꜱ", callback_data="cbowner"
+                        "🙂 𝙊𝙬𝙣𝙚𝙧 𝙐𝙨𝙚", callback_data="cbowner"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "😍 ꜰᴜɴ ᴄᴍᴅꜱ", callback_data="cbfun"
+                        "😍 𝙁𝙪𝙣 𝙐𝙨𝙚", callback_data="cbfun"
                     )
                 ]
             ]
@@ -161,7 +161,7 @@ async def ping_pong(client: Client, message: Message):
     delta_ping = time() - start
     await m_reply.edit_text(
         "𝚣 `ᴘᴏɴɢ!!`\n"
-        f"🇿  `{delta_ping * 1000:.3f} ᴍꜱ`"
+        f"🇧   `{delta_ping * 1000:.3f} ᴍꜱ`"
     )
 
 
@@ -172,7 +172,7 @@ async def get_uptime(client: Client, message: Message):
     uptime_sec = (current_time - START_TIME).total_seconds()
     uptime = await _human_time_duration(int(uptime_sec))
     await message.reply_text(
-        "🤖 ᴢᴀɪᴅ ꜱᴛᴀᴛᴜꜱ:\n"
+        "🤖 ʙᴀᴅɴᴀᴍ ꜱᴛᴀᴛᴜꜱ:\n"
         f"• **ᴜᴘᴛɪᴍᴇ:** `{uptime}`\n"
         f"• **ꜱᴛᴀʀᴛ ᴛɪᴍᴇ:** `{START_TIME_ISO}`"
     )

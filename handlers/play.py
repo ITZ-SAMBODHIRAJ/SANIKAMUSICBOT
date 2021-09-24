@@ -211,22 +211,22 @@ async def hfmm(_, message):
     if status == "ON" or status == "on" or status == "On":
         lel = await message.reply("`processing...`")
         if not message.chat.id in DISABLED_GROUPS:
-            await lel.edit("**Bsdk music player already activated.**")
+            await lel.edit("**Naughty music player already activated.**")
             return
         DISABLED_GROUPS.remove(message.chat.id)
         await lel.edit(
-            f"✅ **Bsdk music player has been activated in this chat.**\n\n💬 {message.chat.id}"
+            f"✅ **Naughty music player has been activated in this chat.**\n\n💬 {message.chat.id}"
         )
 
     elif status == "OFF" or status == "off" or status == "Off":
         lel = await message.reply("`processing...`")
         
         if message.chat.id in DISABLED_GROUPS:
-            await lel.edit("**Bsdk music player already deactivated.**")
+            await lel.edit("**Naughty music player already deactivated.**")
             return
         DISABLED_GROUPS.append(message.chat.id)
         await lel.edit(
-            f"✅ **Bsdk music player has been deactivated in this chat.**\n\n💬 {message.chat.id}"
+            f"✅ **Naughty music player has been deactivated in this chat.**\n\n💬 {message.chat.id}"
         )
     else:
         await message.reply_text(
@@ -245,7 +245,7 @@ async def p_cb(b, cb):
     if type_ == "playlist":
         queue = que.get(cb.message.chat.id)
         if not queue:
-            await cb.message.edit("**Bsdk nothing is playing ❗**")
+            await cb.message.edit("**Naughty nothing is playing ❗**")
         temp = []
         for t in queue:
             temp.append(t)
@@ -304,7 +304,7 @@ async def m_cb(b, cb):
             ) or (
                 callsmusic.pytgcalls.active_calls[chet_id] == "playing"
             ):
-                await cb.answer("Bsdk assistant is not connected to voice chat!", show_alert=True)
+                await cb.answer("Naughty assistant is not connected to voice chat!", show_alert=True)
         else:
             callsmusic.pytgcalls.resume_stream(chet_id)
             await cb.answer("music resumed!")
@@ -313,7 +313,7 @@ async def m_cb(b, cb):
     elif type_ == "playlist":
         queue = que.get(cb.message.chat.id)
         if not queue:   
-            await cb.message.edit("❗Bsdk nothing in streaming!")
+            await cb.message.edit("❗Naughty nothing in streaming!")
         temp = []
         for t in queue:
             temp.append(t)
@@ -339,7 +339,7 @@ async def m_cb(b, cb):
             ) or (
                 callsmusic.pytgcalls.active_calls[chet_id] == "playing"
             ):
-                await cb.answer("Bsdk voice chat is not connected or already playing", show_alert=True)
+                await cb.answer("Naughty voice chat is not connected or already playing", show_alert=True)
         else:
             callsmusic.pytgcalls.resume_stream(chet_id)
             await cb.answer("music resumed!")
@@ -350,7 +350,7 @@ async def m_cb(b, cb):
                 ) or (
                     callsmusic.pytgcalls.active_calls[chet_id] == "paused"
                 ):
-            await cb.answer("Bsdk voice chat is not connected or already paused", show_alert=True)
+            await cb.answer("Naughty voice chat is not connected or already paused", show_alert=True)
         else:
             callsmusic.pytgcalls.pause_stream(chet_id)
             
@@ -387,14 +387,14 @@ async def m_cb(b, cb):
         if qeue:
             qeue.pop(0)
         if chet_id not in callsmusic.pytgcalls.active_calls:
-            await cb.answer("assistant is not connected to voice chat!", show_alert=True)
+            await cb.answer("Naughty assistant is not connected to voice chat!", show_alert=True)
         else:
             callsmusic.queues.task_done(chet_id)
 
             if callsmusic.queues.is_empty(chet_id):
                 callsmusic.pytgcalls.leave_group_call(chet_id)
 
-                await cb.message.edit("• no more playlist\n• Bsdk i m leaving voice chat")
+                await cb.message.edit("• no more playlist\n• Naughty i m leaving voice chat")
             else:
                 callsmusic.pytgcalls.change_stream(
                     chet_id, callsmusic.queues.get(chet_id)["file"]
@@ -415,7 +415,7 @@ async def m_cb(b, cb):
             callsmusic.pytgcalls.leave_group_call(chet_id)
             await cb.message.edit("⏹ **Naughty music stopped!**")
         else:
-            await cb.answer("assistant is not connected to voice chat!", show_alert=True)
+            await cb.answer("Naughty assistant is not connected to voice chat!", show_alert=True)
 
 
 @Client.on_message(command("play") & other_filters)
@@ -504,7 +504,7 @@ async def play(_, message: Message):
     if audio:
         if round(audio.duration / 60) > DURATION_LIMIT:
             raise DurationLimitError(
-                f"❌ **Bsdk Itna** `{DURATION_LIMIT}` **Bada song play Land krunga!**"
+                f"❌ **Bsdk Itna** `{DURATION_LIMIT}` **Bada song ghanta play krunga!**"
             )
         keyboard = InlineKeyboardMarkup(
             [
@@ -576,7 +576,7 @@ async def play(_, message: Message):
         try:
           results = YoutubeSearch(query, max_results=6).to_dict()
         except:
-          await lel.edit("**Bsdk please give a song name you want to play !**")
+          await lel.edit("**Naughty please give a song name you want to play !**")
         # veez project
         try:
             toxxt = "⚡ __ᴄʜʜᴏꜱᴇ ᴛʜᴇ ꜱᴏɴɢ ᴡʜɪᴄʜ ᴜ ᴡᴀɴᴛ ᴛᴏ ᴘʟᴀʏ:__\n\n"
@@ -723,7 +723,7 @@ async def lol_cb(b, cb):
             dur += (int(dur_arr[i]) * secmul)
             secmul *= 60
         if (dur / 60) > DURATION_LIMIT:
-             await cb.message.edit(f"❌ ʙꜱᴅᴋ ɪᴛɴᴀ `{DURATION_LIMIT}` ᴍɪɴᴜᴛᴇꜱ. ʙᴀᴅᴀ ꜱᴏɴɢ ʟᴀɴᴅ ɴᴀᴀ ᴘʟᴀʏ ᴋʀᴜɴɢ")
+             await cb.message.edit(f"❌ ʙꜱᴅᴋ ɪᴛɴᴀ `{DURATION_LIMIT}` ᴍɪɴᴜᴛᴇꜱ. ʙᴀᴅᴀ ꜱᴏɴɢ ɢʜᴀɴᴛᴀ ᴘʟᴀʏ ᴋʀᴜɴɢ")
              return
     except:
         pass
@@ -829,7 +829,7 @@ async def ytplay(_, message: Message):
                 try:
                     await USER.join_chat(invitelink)
                     await USER.send_message(
-                        message.chat.id, "🤖: Hii i'm Naughty music joined to this group for playing music in voice chat"
+                        message.chat.id, "🤖: Hii i'm Naughty music joined to this group for playing music in voice chat Powerd by @Badnam_xD"
                     )
                     await lel.edit(
                         "<b>💡 Naughty userbot succesfully joined your chat</b>",
@@ -926,7 +926,7 @@ async def ytplay(_, message: Message):
         try:
             callsmusic.pytgcalls.join_group_call(chat_id, file_path)
         except:
-            message.reply("**❗ Bsdk 😪, no active voice chat here, please turn on the voice chat first**")
+            message.reply("**❗ Naughty 😪, no active voice chat here, please turn on the voice chat first**")
             return
         await message.reply_photo(
             photo="final.png",

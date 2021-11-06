@@ -52,16 +52,16 @@ async def start_(client: Client, message: Message):
                          "😄 ᴄᴏᴍᴍᴀɴᴅꜱ", callback_data="cbcmds"
                     ),
                     InlineKeyboardButton(
-                        "🔥 𝘽𝙖𝙙𝙣𝙖𝙢 💝", url=f"https://t.me/Badnam_xD")
+                        "🔥 𝘽𝙖𝙙𝙣𝙖𝙢 💝", url=f"https://t.me/Its_Badnam_xD")
                 ],[
                     InlineKeyboardButton(
-                        "🎌 𝙂𝙧𝙤𝙪𝙥 𝙊𝙬𝙣𝙚𝙧 🎌", url=f"https://t.me/Nau_ghty_devil"
+                        "🎌 𝙂𝙧𝙤𝙪𝙥 𝙊𝙬𝙣𝙚𝙧 🎌", url=f"https://t.me/ITZ_HEARTLESS_OWNER"
                     ),
                     InlineKeyboardButton(
-                        "📡𝘾𝙝𝙖𝙩𝙩𝙞𝙣𝙜 𝙎𝙚𝙧𝙫𝙚𝙧📌", url=f"https://t.me/naughty_stud_ents")
+                        "📡𝘾𝙝𝙖𝙩𝙩𝙞𝙣𝙜 𝙎𝙚𝙧𝙫𝙚𝙧📌", url=f"https://t.me/INDIAN_NETWORK_OP")
                 ],[
                     InlineKeyboardButton(
-                        "💝 𝘽𝙝𝙖𝙞 💝", url="https://t.me/Atit_raj_188")
+                        "💝 𝘽𝙝𝙖𝙞 💝", url="https://t.me/MR_X_OP_BOLTE ")
                 ],[
                     InlineKeyboardButton(
                         "💥 𝘾𝙤𝙙𝙚'𝙨 💫", url="https://github.com/BadnamOp/Badnam_Vc_Player"
@@ -84,7 +84,7 @@ async def start(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "✨ 𝘾𝙝𝙖𝙩𝙩𝙞𝙣𝙜 𝙜𝙧𝙤𝙪𝙥", url=f"https://t.me/naughty_stud_ents"
+                        "✨ 𝘾𝙝𝙖𝙩𝙩𝙞𝙣𝙜 𝙜𝙧𝙤𝙪𝙥", url=f"https://t.me/https://t.me/INDIAN_NETWORK_OP"
                     ),
                     InlineKeyboardButton(
                         "📣 𝙘𝙝𝙖𝙣𝙣𝙚𝙡", url=f"https://t.me/its_akku_about"
@@ -172,7 +172,7 @@ async def get_uptime(client: Client, message: Message):
     uptime_sec = (current_time - START_TIME).total_seconds()
     uptime = await _human_time_duration(int(uptime_sec))
     await message.reply_text(
-        "🤖 ʙᴀᴅɴᴀᴍ ꜱᴛᴀᴛᴜꜱ:\n"
+        "🤖 Bot ꜱᴛᴀᴛᴜꜱ:\n"
         f"• **ᴜᴘᴛɪᴍᴇ:** `{uptime}`\n"
         f"• **ꜱᴛᴀʀᴛ ᴛɪᴍᴇ:** `{START_TIME_ISO}`"
     )
